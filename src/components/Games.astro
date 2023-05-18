@@ -1,0 +1,22 @@
+---
+import Game from './Game.astro'
+import { games } from '../games.js'
+---
+
+<div class='px-6 py-24 w-full flex flex-col gap-24 sm:px-16'>
+  {
+    games.map((game) => (
+      <Game
+        image={game.image}
+        title={game.title}
+        description={game.description}
+        url={game.urlsDownload.url}
+        urlEV={game.urlsDownload.urlEnglishVersion}
+        urlGuide={game.urlGuide}
+        completed={game.completed}
+        beta={game.beta}
+        comingSoon={game.comingSoon}
+      />
+    ))
+  }
+</div>

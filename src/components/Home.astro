@@ -1,0 +1,135 @@
+---
+import Games from '../components/Games.astro'
+import Pokeball from '../components/Pokeball.astro'
+---
+
+<main
+  class='px-6 pt-36 w-full h-screen flex items-start justify-center overflow-hidden relative sm:px-16 sm:pt-0 sm:items-center'
+>
+  <section
+    class='z-40 w-full text-white text-center flex flex-col items-center justify-center'
+  >
+    <h1 class='mb-2 w-full font-bold text-6xl sm:text-7xl'>EricLostie</h1>
+    <h3 class='w-full font-normal text-sm opacity-90 sm:text-lg'>
+      Streamer y desarrollador de fangames
+    </h3>
+    <div
+      class='mt-6 w-full flex items-end justify-center scale-75 lg:scale-100'
+    >
+      <div id='lanturn-sprite'></div>
+      <div id='alakazam-sprite'></div>
+      <div id='volcarona-sprite'></div>
+      <div id='eric-sprite'></div>
+    </div>
+  </section>
+  <aside
+    class='w-full flex justify-center overflow-x-hidden absolute -bottom-32 sm:justify-end sm:-right-16'
+  >
+    <img
+      class='z-30 max-w-none w-auto h-[460px]'
+      src='/eric.png'
+      alt='EricLostie'
+    />
+  </aside>
+  <div
+    class='z-20 -mt-36 w-auto h-full opacity-5 flex items-center absolute -left-1/2 sm:mt-0 sm:-left-44'
+  >
+    <Pokeball />
+  </div>
+  <div class='z-10 bg-grid absolute inset-0'></div>
+</main>
+<section class='bg-[#1a0c35]'>
+  <Games />
+</section>
+
+<style>
+  main {
+    background: #1a0c35;
+    background-image: radial-gradient(
+      at 3.1% 15.9%,
+      #5e37ba 0px,
+      transparent 50%
+    );
+  }
+
+  #lanturn-sprite {
+    height: 42px;
+    width: 64px;
+    background: url('/lanturn-sprite.png');
+    animation: barril-sprite 1s steps(4) infinite;
+  }
+  @keyframes barril-sprite {
+    from {
+      background-position: 0;
+    }
+    to {
+      background-position: -256px;
+    }
+  }
+  #alakazam-sprite {
+    height: 48px;
+    width: 64px;
+    background: url('/alakazam-sprite.png');
+    animation: barril-sprite 1s steps(4) infinite;
+  }
+  @keyframes barril-sprite {
+    from {
+      background-position: 0;
+    }
+    to {
+      background-position: -256px;
+    }
+  }
+  #volcarona-sprite {
+    height: 48px;
+    width: 64px;
+    background: url('/volcarona-sprite.png');
+    animation: barril-sprite 1s steps(4) infinite;
+  }
+  @keyframes barril-sprite {
+    from {
+      background-position: 0;
+    }
+    to {
+      background-position: -256px;
+    }
+  }
+  #eric-sprite {
+    height: 60px;
+    width: 64px;
+    background: url('/eric-sprite.png');
+    animation: barril-sprite 1s steps(4) infinite;
+  }
+  @keyframes barril-sprite {
+    from {
+      background-position: 0;
+    }
+    to {
+      background-position: -256px;
+    }
+  }
+
+  .bg-grid {
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, #ffffff07 1px, transparent 1px),
+      linear-gradient(to bottom, #ffffff07 1px, transparent 1px);
+    background-position: top center;
+    image-rendering: pixelated;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      10%,
+      white,
+      90%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      10%,
+      white,
+      90%,
+      transparent
+    );
+  }
+</style>

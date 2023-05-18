@@ -1,0 +1,46 @@
+---
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/png' href='/ericlostie-logo.png' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class='relative'>
+    <header class='z-50 w-full absolute top-0'>
+      <nav class='w-full h-24'>
+        <ul
+          class='w-full h-full text-white font-light text-xs flex items-center justify-center gap-4'
+        >
+          <li><a href=''>FANGAMES</a></li>
+          <li>
+            <img
+              class='h-16'
+              src='https://img.pokemondb.net/sprites/black-white/anim/normal/volcarona.gif'
+              alt='Volcarona'
+            />
+          </li>
+          <li><a href=''>CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  body {
+    font-family: 'Lexend', sans-serif;
+  }
+</style>

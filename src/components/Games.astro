@@ -1,22 +1,53 @@
 ---
 import Game from './Game.astro'
 import { games } from '../games.js'
+import ButtonFill from './icons/ButtonFill.astro'
 ---
 
-<div class='px-6 py-24 w-full flex flex-col gap-24 sm:px-16'>
-  {
-    games.map((game) => (
-      <Game
-        image={game.image}
-        title={game.title}
-        description={game.description}
-        url={game.urlsDownload.url}
-        urlEV={game.urlsDownload.urlEnglishVersion}
-        urlGuide={game.urlGuide}
-        completed={game.completed}
-        beta={game.beta}
-        comingSoon={game.comingSoon}
+<section class='bg-[#1a0c35]'>
+  <div class='px-6 py-24 w-full flex flex-col gap-24 overflow-hidden sm:px-16'>
+    <header
+      class='p-8 mx-auto max-w-xl text-xs bg-gradient-to-t from-[#5E37BA3c] to-[#1A0C35] rounded-2xl flex flex-col items-center justify-center gap-4 relative'
+    >
+      <h3 class='text-white font-semibold text-3xl sm:text-5xl'>FanGames</h3>
+      <p
+        class='max-w-[260px] text-white text-center font-extralight text-xs sm:text-sm sm:max-w-lg'
+      >
+        Todos los juegos se pueden jugar en PC sin necesidad de emulador, y en
+        Android con el emulador Joiplay.
+      </p>
+      <ButtonFill
+        url='https://drive.google.com/drive/folders/1ViTeDaARC0R6X4SYa9RxSTQJhgMox4GC'
+        label='GUÍA ANDROID'
+        disable='url'
+        type='file'
       />
-    ))
+      <img
+        class='w-auto h-28 rotate-[15deg] absolute -bottom-6 -right-6 sm:h-36 sm:-bottom-8 sm:-right-8'
+        src='/nota.webp'
+        alt='nota'
+      />
+    </header>
+    {
+      games.map((game) => (
+        <Game
+          image={game.image}
+          title={game.title}
+          description={game.description}
+          url={game.urlsDownload.url}
+          urlEV={game.urlsDownload.urlEnglishVersion}
+          urlGuide={game.urlGuide}
+          completed={game.completed}
+          beta={game.beta}
+          comingSoon={game.comingSoon}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .bg {
+    background-color: #ffffff33;
   }
-</div>
+</style>

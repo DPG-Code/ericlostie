@@ -1,0 +1,55 @@
+---
+import Twitch from './icons/Twitch.astro'
+import Twitter from './icons/Twitter.astro'
+import Youtube from './icons/Youtube.astro'
+import Correo from './icons/Correo.astro'
+---
+
+<footer
+  class='px-6 py-24 w-full flex flex-col items-center justify-center gap-10 bg-grid bg-[#1a0c35] sm:px-16'
+>
+  <h5 class='text-white font-semibold text-4xl sm:text-5xl'>Redes Sociales</h5>
+  <div class='w-full flex items-center justify-center gap-4'>
+    <a href='https://www.twitch.tv/ericlostie/about' target='_blank'>
+      <Twitch />
+    </a>
+    <a href='https://twitter.com/Eric_Lostie' target='_blank'>
+      <Twitter />
+    </a>
+    <a
+      href='https://www.youtube.com/channel/UCJirVLggnKmNw2IuZUuD4Rg'
+      target='_blank'
+    >
+      <Youtube />
+    </a>
+    <a href='ericlostie2093@gmail.com' target='_blank'>
+      <Correo />
+    </a>
+  </div>
+</footer>
+
+<style>
+  .bg-grid {
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, #ffffff07 1px, transparent 1px),
+      linear-gradient(to bottom, #ffffff07 1px, transparent 1px);
+    background-position: top center;
+    image-rendering: pixelated;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      10%,
+      white,
+      90%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      10%,
+      white,
+      90%,
+      transparent
+    );
+  }
+</style>

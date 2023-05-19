@@ -22,6 +22,9 @@ const {
   beta,
   comingSoon
 } = Astro.props
+
+import ButtonFill from './icons/ButtonFill.astro'
+import ButtonBordered from './icons/ButtonBordered.astro'
 ---
 
 <div
@@ -29,7 +32,9 @@ const {
 >
   <aside class='w-auto'>
     <img
-      class='max-w-none w-[320px] h-auto rounded-xl'
+      width='300'
+      height='170'
+      class='max-w-none w-[300px] h-[180px] object-cover rounded-xl'
       src={image}
       alt={title}
     />
@@ -38,7 +43,7 @@ const {
     class='w-full text-white flex flex-col items-start justify-center gap-3'
   >
     <h4 class='font-semibold text-3xl'>{title}</h4>
-    <p class='font-light text-xs'>{description}</p>
+    <p class='font-extralight text-xs'>{description}</p>
     <div
       class='font-light text-xs text-white flex items-start justify-center gap-2'
     >
@@ -63,49 +68,9 @@ const {
         )
       }
     </div>
-    <div class='mt-2 flex items-start justify-center gap-4'>
-      <a
-        class='px-6 py-1.5 text-black bg-white border-2 border-white rounded-full flex items-center justify-center gap-2'
-        href={url}
-        target='_blank'
-      >
-        DESCARGAR
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          stroke-width='2'
-          stroke='currentColor'
-          class='w-4 h-4'
-        >
-          <path
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            d='M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3'
-          ></path>
-        </svg>
-      </a>
-      <a
-        class='px-6 py-1.5 border-2 border-white rounded-full flex items-center justify-center gap-2'
-        href={urlGuide}
-        target='_blank'
-      >
-        GUÍA
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          stroke-width='2'
-          stroke='currentColor'
-          class='w-4 h-4'
-        >
-          <path
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            d='M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z'
-          ></path>
-        </svg>
-      </a>
+    <div class='mt-2 text-xs flex items-start justify-center gap-4'>
+      <ButtonFill url={url} label='DESCARGAR' disable={url} type='download' />
+      <ButtonBordered url={urlGuide} label='GUÍA' disable={urlGuide} />
     </div>
   </article>
 </div>

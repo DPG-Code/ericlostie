@@ -4,26 +4,32 @@ import { games } from '../games.js'
 import ButtonFill from './icons/ButtonFill.astro'
 ---
 
-<section class='bg-[#1a0c35]'>
-  <div class='px-6 py-24 w-full flex flex-col gap-24 overflow-hidden sm:px-16'>
+<section id='fangames' class='bg-[#1a0c35]'>
+  <div
+    class='px-6 py-24 w-full flex flex-col gap-24 overflow-hidden sm:px-16 lg:px-24 xl:py-32 xl:gap-32 2xl:py-44 2xl:gap-48'
+  >
     <header
-      class='p-8 mx-auto max-w-xl text-xs bg-gradient-to-t from-[#5E37BA3c] to-[#1A0C35] rounded-2xl flex flex-col items-center justify-center gap-4 relative'
+      class='p-8 mx-auto max-w-xl text-xs bg-gradient-to-t from-[#5E37BA3c] to-[#1A0C35] rounded-2xl flex flex-col items-center justify-center gap-4 relative 2xl:px-16 2xl:max-w-2xl 2xl:gap-6'
     >
-      <h3 class='text-white font-semibold text-3xl sm:text-5xl'>FanGames</h3>
+      <h3 class='text-white font-semibold text-3xl sm:text-5xl 2xl:text-6xl'>
+        ¿Como jugar?
+      </h3>
       <p
-        class='max-w-[260px] text-white text-center font-extralight text-xs sm:text-sm sm:max-w-lg'
+        class='max-w-[260px] text-white text-center font-light text-xs sm:text-sm sm:max-w-lg 2xl:text-lg 2xl:max-w-xl'
       >
         Todos los juegos se pueden jugar en PC sin necesidad de emulador, y en
         Android con el emulador Joiplay.
       </p>
-      <ButtonFill
-        url='https://drive.google.com/drive/folders/1ViTeDaARC0R6X4SYa9RxSTQJhgMox4GC'
-        label='GUÍA ANDROID'
-        disable='url'
-        type='file'
-      />
+      <div class='2xl:text-xl'>
+        <ButtonFill
+          url='https://drive.google.com/drive/folders/1ViTeDaARC0R6X4SYa9RxSTQJhgMox4GC'
+          label='GUÍA ANDROID'
+          disable='url'
+          type='file'
+        />
+      </div>
       <img
-        class='w-auto h-28 rotate-[15deg] absolute -bottom-6 -right-6 sm:h-36 sm:-bottom-8 sm:-right-8'
+        class='w-auto h-28 rotate-[15deg] absolute -bottom-6 -right-6 sm:h-36 sm:-bottom-8 sm:-right-8 2xl:h-44 2xl:-bottom-10 2xl:-right-10'
         src='/nota.webp'
         alt='nota'
       />

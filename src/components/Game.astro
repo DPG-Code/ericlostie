@@ -28,24 +28,28 @@ import ButtonBordered from './icons/ButtonBordered.astro'
 ---
 
 <div
-  class='w-full flex flex-col items-center justify-between gap-6 sm:flex-row'
+  class='w-full flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center md:gap-10 xl:gap-16 2xl:gap-28'
 >
   <aside class='w-auto'>
     <img
       width='300'
       height='170'
-      class='max-w-none w-[300px] h-[180px] object-cover rounded-xl'
+      class='max-w-none w-[300px] h-[180px] object-cover rounded-xl xl:w-[480px] xl:h-[270px] 2xl:w-[620px] 2xl:h-[348px]'
       src={image}
       alt={title}
     />
   </aside>
   <article
-    class='w-full text-white flex flex-col items-start justify-center gap-3'
+    class='w-full text-white flex flex-col items-start justify-center gap-3 xl:gap-5 2xl:gap-6'
   >
-    <h4 class='font-semibold text-3xl'>{title}</h4>
-    <p class='font-extralight text-xs'>{description}</p>
+    <h4 class='font-semibold text-3xl xl:text-5xl 2xl:text-6xl'>{title}</h4>
+    <p
+      class='max-w-xs font-extralight text-xs sm:max-w-none md:max-w-md lg:text-base xl:max-w-none xl:text-lg 2xl:text-3xl'
+    >
+      {description}
+    </p>
     <div
-      class='font-light text-xs text-white flex items-start justify-center gap-2'
+      class='font-light text-xs text-white flex items-start justify-center gap-2 xl:text-sm 2xl:text-xl'
     >
       {
         completed && (
@@ -68,7 +72,9 @@ import ButtonBordered from './icons/ButtonBordered.astro'
         )
       }
     </div>
-    <div class='mt-2 text-xs flex items-start justify-center gap-4'>
+    <div
+      class='mt-2 text-xs flex items-start justify-center gap-4 xl:text-base 2xl:text-xl'
+    >
       <ButtonFill url={url} label='DESCARGAR' disable={url} type='download' />
       <ButtonBordered url={urlGuide} label='GUÍA' disable={urlGuide} />
     </div>

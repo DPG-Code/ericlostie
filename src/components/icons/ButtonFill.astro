@@ -11,7 +11,7 @@ const { url, label, disable, type } = Astro.props
 <a
   class={`${
     disable || 'pointer-events-none opacity-10'
-  } px-6 py-1.5 font-medium text-black bg-white border-2 border-white rounded-full flex items-center justify-center gap-2`}
+  } px-6 py-1.5 font-medium text-black bg-white border-2 border-white rounded-full flex items-center justify-center gap-2 xl:px-7 xl:py-2 xl:gap-3`}
   href={url}
   target='_blank'
 >
@@ -24,7 +24,7 @@ const { url, label, disable, type } = Astro.props
         viewBox='0 0 24 24'
         stroke-width='2'
         stroke='currentColor'
-        class='w-4 h-4'
+        class='w-4 h-4 xl:w-5 xl:h-5'
       >
         <path
           stroke-linecap='round'
@@ -39,7 +39,7 @@ const { url, label, disable, type } = Astro.props
         viewBox='0 0 24 24'
         stroke-width='2'
         stroke='currentColor'
-        class='w-4 h-4'
+        class='w-4 h-4 xl:w-5 xl:h-5'
       >
         <path
           stroke-linecap='round'

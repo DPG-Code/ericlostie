@@ -1,6 +1,6 @@
 export const games = [
   {
-    image: '/games/añil.png',
+    image: '/games/añil.webp',
     title: 'Pokémon Añil',
     description:
       'Remake de Kanto totalmente modernizado y actualizado, una historia mejorada y la posibilidad de jugar con todos los Pokémon de las 9 gens o solo con los Pokémon clásicos.',
@@ -16,7 +16,7 @@ export const games = [
     comingSoon: false
   },
   {
-    image: '/games/opalo.png',
+    image: '/games/opalo.webp',
     title: 'Pokémon Ópalo',
     description:
       'Una historia ambiciosa de temática western que te llevará por 2 regiones y 16 gimnasios con el fin de evitar la destrucción del Mundo Pokémon.',
@@ -31,7 +31,7 @@ export const games = [
     comingSoon: false
   },
   {
-    image: '/games/titan.png',
+    image: '/games/titan.webp',
     title: 'Pokémon Titan',
     description:
       'El primer fangame que hice. Juego largo de 2 regiones y 16 gimnasios en el que tendrás que desmantelar a varios equipos de villanos.',
@@ -45,7 +45,7 @@ export const games = [
     comingSoon: false
   },
   {
-    image: '/games/iberia.png',
+    image: '/games/iberia.webp',
     title: 'Pokémon Iberia',
     description:
       'Aventura llena de humor negro en una región basada en España, donde los líderes de gimnasio y los enemigos son personajes famosos de dicho país.',
@@ -59,7 +59,7 @@ export const games = [
     comingSoon: false
   },
   {
-    image: '/games/z.png',
+    image: '/games/z.webp',
     title: 'Pokémon Z',
     description:
       'Este será mi juego definitivo. La historia tendrá lugar en la antigüedad de Kalos, donde ocurrirá la mayor guerra que el Mundo Pokémon ha presenciado.',

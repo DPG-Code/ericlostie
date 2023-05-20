@@ -11,25 +11,25 @@ const { title } = Astro.props
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/png' href='/ericlostie-logo.png' />
+    <link rel='icon' type='image/png' href='/ericlostie-logo.webp' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class='bg-[#1a0c35] relative'>
     <header class='z-50 w-full absolute top-0'>
-      <nav class='w-full h-24'>
+      <nav class='w-full h-24 sm:h-32 lg:h-36 2xl:h-44'>
         <ul
-          class='w-full h-full text-white font-light text-xs flex items-center justify-center gap-4'
+          class='w-full h-full text-white font-light text-xs flex items-center justify-center gap-4 sm:text-sm lg:text-lg lg:gap-8 2xl:text-xl 2xl:gap-10'
         >
-          <li><a href=''>FANGAMES</a></li>
+          <li><a href='#fangames'>FANGAMES</a></li>
           <li>
             <img
-              class='h-16'
+              class='h-16 lg:h-20 2xl:h-24'
               src='https://img.pokemondb.net/sprites/black-white/anim/normal/volcarona.gif'
               alt='Volcarona'
             />
           </li>
-          <li><a href=''>CONTACTO</a></li>
+          <li><a href='#contact'>CONTACTO</a></li>
         </ul>
       </nav>
     </header>
@@ -39,6 +39,21 @@ const { title } = Astro.props
 
 <style is:global>
   @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 10px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     font-family: 'Lexend', sans-serif;

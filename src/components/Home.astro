@@ -6,23 +6,25 @@ import Arrow from './icons/Arrow.astro'
 ---
 
 <main
-  class='px-6 pt-44 w-full h-screen flex items-start justify-center overflow-hidden relative sm:px-16 sm:pt-0 sm:items-center'
+  class='px-6 pt-44 w-full mi-h-[720px] h-screen flex items-start justify-center overflow-hidden relative sm:px-16 sm:pt-0 sm:items-center'
 >
   <section
-    class='z-40 w-full text-white text-center flex flex-col items-center justify-center gap-1'
+    class='z-40 w-full text-white text-center flex flex-col items-center justify-center gap-1 2xl:gap-2'
   >
     <img
       width='320'
       height='80'
-      class='max-w-none w-80 h-auto sm:w-96'
+      class='max-w-none w-80 h-auto sm:w-96 md:w-[520px] lg:w-[720px] 2xl:w-[960px]'
       src='/eric-name.webp'
       alt='EricLostie'
     />
-    <h2 class='w-full font-semibold text-sm opacity-90 sm:text-lg'>
+    <h2
+      class='w-full font-medium text-sm opacity-90 sm:text-lg md:text-xl lg:text-3xl 2xl:text-4xl'
+    >
       DESARROLLADOR DE FANGAMES
     </h2>
     <div
-      class='mt-4 w-full flex items-end justify-center scale-90 lg:scale-100'
+      class='my-4 w-full flex items-end justify-center scale-90 lg:my-8 lg:scale-110 2xl:my-10 2xl:scale-150'
     >
       <div id='alakazam-sprite'></div>
       <div id='eric-sprite'></div>
@@ -33,13 +35,13 @@ import Arrow from './icons/Arrow.astro'
     class='w-full flex justify-center overflow-x-hidden absolute -bottom-32 sm:justify-end sm:-right-16'
   >
     <img
-      class='z-30 max-w-none w-auto h-[460px]'
+      class='z-30 max-w-none w-auto h-[460px] 2xl:h-[620px]'
       src='/eric.png'
       alt='EricLostie'
     />
   </aside>
   <div
-    class='z-20 -mt-36 w-auto h-full opacity-5 flex items-center absolute -left-1/2 sm:mt-0 sm:-left-44'
+    class='z-20 w-full h-full opacity-5 flex items-center justify-center absolute top-0 left-0 sm:mt-0'
   >
     <Pokeball />
   </div>
